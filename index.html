@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najmeddine Gharbi | Ingénieur Génie Civil</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#090d16] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950">
+    <div class="construction-background" aria-hidden="true">
+        <div class="construction-bg-icon construction-bg-icon-1" data-parallax-speed="0.018">
+            <img src="assets/images/construction-background/building-construction-industry-4-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-2" data-parallax-speed="-0.024">
+            <img src="assets/images/construction-background/building-construction-industry-5-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-3" data-parallax-speed="0.012">
+            <img src="assets/images/construction-background/brick-building-construction-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-4" data-parallax-speed="-0.016">
+            <img src="assets/images/construction-background/building-construction-industry-26-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-5" data-parallax-speed="0.022">
+            <img src="assets/images/construction-background/building-catterpillar-construction-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-6" data-parallax-speed="-0.02">
+            <img src="assets/images/construction-background/building-construction-crane-2-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-7" data-parallax-speed="0.014">
+            <img src="assets/images/construction-background/building-concrete-construction-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-8" data-parallax-speed="-0.012">
+            <img src="assets/images/construction-background/building-construction-dump-truck-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-9" data-parallax-speed="0.02">
+            <img src="assets/images/construction-background/building-concrete-construction-2-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-10" data-parallax-speed="-0.018">
+            <img src="assets/images/construction-background/building-construction-industry-29-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+        <div class="construction-bg-icon construction-bg-icon-11" data-parallax-speed="0.016">
+            <img src="assets/images/construction-background/building-construction-industry-21-svgrepo-com.svg" alt="" draggable="false">
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-header text-white transition-all duration-300 shadow-xl border-b border-slate-800">
+        <div class="nav-bar-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="nav-bar-inner flex items-center justify-between h-20">
+                <!-- Logo / Identity -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <span class="brand-logo" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <defs>
+                                <linearGradient id="brandHelmet" x1="10" y1="12" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#67e8f9"/>
+                                    <stop offset="1" stop-color="#0891b2"/>
+                                </linearGradient>
+                            </defs>
+                            <path class="brand-helmet-shell" d="M9 29a15 15 0 0 1 30 0v2H9v-2Z" fill="url(#brandHelmet)"/>
+                            <path class="brand-helmet-brim" d="M6 31h36v5H6z" fill="#22d3ee"/>
+                            <path d="M22 15h4v16h-4z" fill="#a5f3fc"/>
+                            <path d="M12 25v5m24-5v5" stroke="#cffafe" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <span class="text-lg font-extrabold tracking-tight block leading-tight text-white">NAJMEDDINE GHARBI</span>
+                        <span class="text-xs text-orange-400 font-semibold tracking-wider uppercase">Ingénieur Génie Civil</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-3 text-sm font-medium">
+                    <a href="#about" class="px-3 py-2 rounded-lg hover:text-orange-400 transition-colors">À Propos</a>
+                    <a href="#projects" class="px-3 py-2 rounded-lg hover:text-orange-400 transition-colors">Projets & Stages</a>
+                    <a href="#skills" class="px-3 py-2 rounded-lg hover:text-orange-400 transition-colors">Logiciels & Compétences</a>
+                    <a href="#timeline" class="px-3 py-2 rounded-lg hover:text-orange-400 transition-colors">Parcours</a>
+                    <a href="#engagement" class="px-3 py-2 rounded-lg hover:text-orange-400 transition-colors">Vie Associative</a>
+                    <div class="language-switch" role="group" aria-label="Choisir la langue">
+                        <button type="button" data-language-switch="fr" aria-pressed="true">FR</button>
+                        <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+                    </div>
+                    <a href="#contact" class="ml-3 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold transition-all shadow-md shadow-orange-500/20">
+                        Me Contacter
+                    </a>
+                    <button type="button" class="nav-social-link email-popover-trigger contact-arrow-trigger" aria-label="Afficher les liens de contact" aria-expanded="false" aria-controls="email-popover" title="Contact">
+                        <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                </nav>
+
+                <button id="nav-profile-trigger" type="button" class="nav-profile-trigger email-popover-trigger" aria-label="Afficher mes réseaux sociaux" aria-expanded="false" aria-controls="email-popover" title="Réseaux sociaux">
+                    <img src="assets/images/profile.jpg" alt="">
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-header-actions md:hidden">
+                    <div class="language-switch" role="group" aria-label="Choisir la langue">
+                        <button type="button" data-language-switch="fr" aria-pressed="true">FR</button>
+                        <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+                    </div>
+                    <button type="button" class="nav-social-link email-popover-trigger contact-arrow-trigger" aria-label="Afficher les liens de contact" aria-expanded="false" aria-controls="email-popover" title="Contact">
+                        <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <button id="mobile-menu-btn" type="button" class="text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Ouvrir le menu de navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-2xl"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+        <div id="email-popover" class="email-popover hidden" role="dialog" aria-label="Liens sociaux et contact">
+            <span class="email-popover-label">Réseaux & contact</span>
+            <a class="popover-contact-link popover-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=najmeddine.gharbi2001%40gmail.com" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.5 5h17A1.5 1.5 0 0 1 22 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17.5v-11A1.5 1.5 0 0 1 3.5 5Zm.2 2 8.3 6.1L20.3 7H3.7Zm16.3 10V9.3l-7.4 5.4a1 1 0 0 1-1.2 0L4 9.3V17h16Z"/></svg>
+                <span>Mail</span>
+            </a>
+            <a class="popover-contact-link popover-whatsapp" href="https://wa.me/21625118311" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.48 15.01L2.25 22l5.12-1.34A9.93 9.93 0 1 0 12.04 2Zm0 18.06a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.04.8.81-2.96-.2-.31a8.13 8.13 0 1 1 6.86 3.78Zm4.46-6.08c-.25-.13-1.48-.73-1.71-.82-.23-.08-.4-.12-.56.13-.17.25-.65.82-.8.99-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.38.11-.5.11-.1.25-.28.37-.42.13-.15.17-.25.25-.42.09-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.09s.9 2.43 1.02 2.6c.13.17 1.77 2.71 4.29 3.8.6.26 1.07.41 1.43.52.6.19 1.15.16 1.59.1.49-.07 1.48-.61 1.69-1.2.21-.59.21-1.1.15-1.2-.06-.11-.23-.17-.48-.3Z"/></svg>
+                <span>WhatsApp</span>
+            </a>
+            <a class="popover-contact-link popover-facebook" href="https://www.facebook.com/najmeddine.gharbi.12" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H7v3.2h2.8V21h3.7Z"/></svg>
+                <span>Facebook</span>
+            </a>
+            <a class="popover-contact-link popover-instagram" href="https://www.instagram.com/najmeddinegharbi" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm8.9 1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+                <span>Instagram</span>
+            </a>
+            <a class="popover-contact-link popover-linkedin" href="https://www.linkedin.com/in/najmeddine-gharbi-aa12531b5" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.34H4.96V9.01h2.97v9.33ZM6.45 7.74a1.72 1.72 0 1 1 .02-3.44 1.72 1.72 0 0 1-.02 3.44Zm11.89 10.6h-2.97v-4.54c0-1.08-.02-2.47-1.51-2.47-1.52 0-1.75 1.18-1.75 2.39v4.62H9.14V9.01h2.85v1.27h.04c.4-.73 1.37-1.5 2.82-1.5 3.01 0 3.57 1.98 3.57 4.56v5Z"/></svg>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-4 pt-3 pb-6 space-y-2 text-base">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-orange-400">À Propos</a>
+            <a href="#projects" class="mobile-link block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-orange-400">Projets & Stages</a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-orange-400">Compétences</a>
+            <a href="#timeline" class="mobile-link block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-orange-400">Parcours</a>
+            <a href="#engagement" class="mobile-link block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-orange-400">Vie Associative</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-lg bg-orange-500 text-white font-bold text-center mt-4">Me Contacter</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-[#090d16] text-white overflow-hidden border-b border-slate-800 bg-cad-grid">
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/80 to-slate-900 pointer-events-none"></div>
+        <div class="hero-illustrations" aria-hidden="true">
+            <svg class="hero-mark hero-mark-crane" viewBox="0 0 280 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="gold-crane" x1="30" y1="30" x2="240" y2="270" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF1B8"/><stop offset=".45" stop-color="#F6C453"/><stop offset="1" stop-color="#A96D19"/></linearGradient></defs>
+                <g stroke="url(#gold-crane)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M139 55V265M121 265H158M128 55H150M139 55V35M132 35H146"/>
+                    <path d="M139 57L28 78H252L139 57Z" fill="#F6C453" fill-opacity=".08"/>
+                    <path d="M39 76L57 81M64 72L82 81M89 67L107 81M114 62L132 81M163 81L180 63M188 81L207 70M215 81L236 70"/>
+                    <path d="M33 78V91H56V78M218 78V94H249V78M233 94V153M227 153H239"/>
+                    <path d="M127 62L139 80L151 62M127 103L139 81L151 103M127 145L139 123L151 145M127 186L139 164L151 186M127 228L139 206L151 228"/>
+                    <path d="M174 81V103H202V81M180 103V115M196 103V115M182 115H194"/>
+                </g>
+            </svg>
+            <svg class="hero-mark hero-mark-excavator" viewBox="0 0 360 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="gold-excavator" x1="40" y1="30" x2="310" y2="210" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF1B8"/><stop offset=".5" stop-color="#F6C453"/><stop offset="1" stop-color="#A96D19"/></linearGradient></defs>
+                <g stroke="url(#gold-excavator)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M34 164C34 147 48 133 65 133H185C205 133 220 148 220 168V176H34V164Z" fill="#F6C453" fill-opacity=".08"/>
+                    <path d="M49 178H205C203 196 189 208 172 208H80C63 208 50 195 49 178Z"/>
+                    <path d="M82 134L95 94H145L165 134M99 94L108 68H146L155 134M103 112H159"/>
+                    <path d="M150 137L192 104L237 52L256 59L220 121L187 150"/>
+                    <path d="M254 58L277 31L291 36L276 68M289 35L315 48L303 67L277 69"/>
+                    <path d="M73 151V194M108 151V194M143 151V194M178 151V194"/>
+                    <circle cx="87" cy="176" r="8" fill="#F6C453" fill-opacity=".18"/>
+                    <circle cx="128" cy="176" r="8" fill="#F6C453" fill-opacity=".18"/>
+                    <circle cx="169" cy="176" r="8" fill="#F6C453" fill-opacity=".18"/>
+                </g>
+            </svg>
+            <svg class="hero-mark hero-mark-helmet" viewBox="0 0 180 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="gold-helmet" x1="24" y1="24" x2="156" y2="128" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF1B8"/><stop offset=".5" stop-color="#F6C453"/><stop offset="1" stop-color="#A96D19"/></linearGradient></defs>
+                <g stroke="url(#gold-helmet)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M27 99C27 64 54 37 89 37C124 37 151 64 151 99H27Z" fill="#F6C453" fill-opacity=".1"/>
+                    <path d="M18 99H160V114H18V99Z" fill="#F6C453" fill-opacity=".08"/>
+                    <path d="M89 38V98M57 47C46 62 41 80 41 99M121 47C132 62 137 80 137 99M77 37C77 28 82 22 89 22C96 22 101 28 101 37"/>
+                </g>
+            </svg>
+            <svg class="hero-mark hero-mark-blueprint" viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="gold-blueprint" x1="30" y1="24" x2="190" y2="150" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF1B8"/><stop offset=".5" stop-color="#F6C453"/><stop offset="1" stop-color="#A96D19"/></linearGradient></defs>
+                <g stroke="url(#gold-blueprint)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M26 24H194V146H26V24Z" fill="#F6C453" fill-opacity=".04"/>
+                    <path d="M45 128V84L78 54L111 84V128M45 84H111M61 128V98H95V128"/>
+                    <path d="M126 128V61H175V128M140 78H161M140 94H161M140 110H161"/>
+                    <path d="M37 37H53M167 135H183M117 37V49M33 138L47 124"/>
+                </g>
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 xl:gap-12 items-center">
+                
+                <!-- Hero Left Info -->
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="hero-availability inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 text-orange-400 text-xs sm:text-sm font-semibold tracking-wide shadow-inner">
+                        <span class="availability-dot" aria-hidden="true"></span>
+                        Disponible pour de nouvelles opportunités
+                    </div>
+                    
+                    <h1 class="hero-name">
+                        <span><span class="helmet-n">N<svg class="helmet-n-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 30a16 16 0 0 1 32 0v3H8v-3Z" fill="#facc15"/><path d="M5 31h38v6H5z" fill="#eab308"/><path d="M23 14h4v16h-4z" fill="#fde68a"/><path d="M12 25v5m24-5v5" stroke="#fff7cc" stroke-width="2" stroke-linecap="round"/></svg></span>AJMEDDINE</span>
+                        <span class="hero-name-accent">GHARBI<span class="hero-name-period"></span></span>
+                    </h1>
+                    
+                    <p class="hero-tagline text-slate-200 text-lg sm:text-2xl font-medium italic leading-relaxed max-w-2xl mx-auto md:mx-0">
+                         De la vision à la construction, nous donnons vie à vos idées 
+                    </p>
+                    
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                        <a href="#projects" class="px-7 py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold transition-all shadow-lg shadow-orange-500/30 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class=""><path d="M0 80C0 53.5 21.5 32 48 32l96 0c26.5 0 48 21.5 48 48l0 16 128 0 0-16c0-26.5 21.5-48 48-48l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-16-128 0 0 16c0 7.3-1.7 14.3-4.6 20.5l68.6 91.5 80 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96c0-7.3 1.7-14.3 4.6-20.5L128 224 48 224c-26.5 0-48-21.5-48-48L0 80z"/></svg> Découvrir Mes Projets
+                        </a>
+                        <div class="cv-download-wrapper relative">
+                            <button id="cv-download-trigger" type="button" onclick="openCVPreview()" aria-haspopup="dialog" aria-expanded="false" aria-controls="cv-preview-modal" class="px-7 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition-all flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-orange-400"><path d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l80 0 0-112c0-35.3 28.7-64 64-64l176 0 0-165.5c0-17-6.7-33.3-18.7-45.3L290.7 18.7C278.7 6.7 262.5 0 245.5 0L96 0zM357.5 176L264 176c-13.3 0-24-10.7-24-24L240 58.5 357.5 176zM240 380c-11 0-20 9-20 20l0 128c0 11 9 20 20 20s20-9 20-20l0-28 12 0c33.1 0 60-26.9 60-60s-26.9-60-60-60l-32 0zm32 80l-12 0 0-40 12 0c11 0 20 9 20 20s-9 20-20 20zm96-80c-11 0-20 9-20 20l0 128c0 11 9 20 20 20l32 0c28.7 0 52-23.3 52-52l0-64c0-28.7-23.3-52-52-52l-32 0zm20 128l0-88 12 0c6.6 0 12 5.4 12 12l0 64c0 6.6-5.4 12-12 12l-12 0zm88-108l0 128c0 11 9 20 20 20s20-9 20-20l0-44 28 0c11 0 20-9 20-20s-9-20-20-20l-28 0 0-24 28 0c11 0 20-9 20-20s-9-20-20-20l-48 0c-11 0-20 9-20 20z"/></svg>
+                                <span>Voir mon CV</span>
+                                <svg class="cv-preview-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Photo -->
+                <div class="hero-portrait-column md:col-span-5 flex flex-col items-center justify-center">
+                    <div class="hero-portrait">
+                        <div class="hero-portrait-halo" aria-hidden="true"></div>
+                        <div class="hero-portrait-ring" aria-hidden="true"></div>
+                        <div class="hero-portrait-frame">
+                            <img id="profile-img" src="assets/images/profile.jpg" alt="Portrait de Najmeddine Gharbi">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Profil & Compétences Clés</h2>
+                <div class="w-20 h-1.5 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="profile-card space-y-6 text-slate-600 leading-relaxed text-base">
+                    <h3 class="profile-card-title">Profil</h3>
+                    <p class="text-lg text-slate-900 font-medium">
+                        Je suis <strong>Najmeddine Gharbi</strong>, Ingénieur Génie Civil diplômé de l'<strong>École Polytechnique de Sousse</strong>, titulaire d'une <strong>Licence en Génie Civil</strong> de l'ISSAT Gabès.
+                    </p>
+                    <p>
+                        Rigoureux et motivé, je possède des compétences solides en <strong>conception et calcul structural</strong> (Béton Armé), <strong>modélisation hydraulique & routière</strong> (Civil 3D, PISTE 5, ALIZE, Covadis), ainsi que la <strong>maîtrise des processus BIM</strong> sous Autodesk Revit et Robot Structural Analysis.
+                    </p>
+                    <p>
+                        Mon parcours comprend également des expériences terrain au sein d'entreprises et de bureaux d'études, notamment dans le suivi de chantiers et la réalisation d'ouvrages d'art et d'assainissement.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-2xl text-orange-500"><path d="M48 195.8l209.2 86.1c9.8 4 20.2 6.1 30.8 6.1s21-2.1 30.8-6.1l242.4-99.8c9-3.7 14.8-12.4 14.8-22.1s-5.8-18.4-14.8-22.1L318.8 38.1C309 34.1 298.6 32 288 32s-21 2.1-30.8 6.1L14.8 137.9C5.8 141.6 0 150.3 0 160L0 456c0 13.3 10.7 24 24 24s24-10.7 24-24l0-260.2zm48 71.7L96 384c0 53 86 96 192 96s192-43 192-96l0-116.6-142.9 58.9c-15.6 6.4-32.2 9.7-49.1 9.7s-33.5-3.3-49.1-9.7L96 267.4z"/></svg>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-bold uppercase">Formation</span>
+                                <span class="text-sm font-bold text-slate-900">Ingénieur (2023 - 2026)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-2xl text-orange-500"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-bold uppercase">Adresse</span>
+                                <span class="text-sm font-bold text-slate-900">M'saken, Sousse, Tunisie</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domain Cards -->
+                <div class="key-skills-card grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <h3 class="key-skills-title">Compétences Clés</h3>
+                    <div class="p-6 bg-slate-900 text-white rounded-2xl shadow-xl relative overflow-hidden group">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-xl text-orange-400 mb-3"><path d="M223.9 32l-76.2 0c-29.4 0-55.1 20.1-62.1 48.6L1.4 420.5C-6.1 450.7 16.8 480 48 480l175.9 0 0-64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 64 176.1 0c31.2 0 54.1-29.3 46.6-59.5L426.5 80.6C419.4 52.1 393.8 32 364.3 32l-76.4 0 0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64zm64 192l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32s32 14.3 32 32z"/></svg>
+                        <h3 class="text-lg font-bold mb-2">Conception Routière & VRD</h3>
+                        <p class="text-slate-400 text-sm">Tracé géométrique (14 km), chaussées (ALIZE, PISTE 5, Civil 3D), bassins versants et assainissement.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-800 text-white rounded-2xl shadow-xl relative overflow-hidden group">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-xl text-orange-400 mb-3"><path d="M64 64l512 0 0 112c-37.6 9.4-64 43.2-64 82l0 76.4c-21-9.7-43.5-14.5-66-14.4-10 .1-20.1 1.1-30 3.1l0-35.1c0-53-43-96-96-96s-96 43-96 96l0 32.7c-5.3-.5-10.7-.8-16-.7-27.7 .2-55.4 7.8-80 23l0-85c0-38.8-26.4-72.6-64-82L64 64zM403.4 444.1C379.1 462.3 351.1 480 320 480s-59.1-17.7-83.4-35.9c-21.3-16.1-49.9-16.1-71.2 0-23.8 17.9-54.1 35.5-88.1 35.3-20.4-.1-40.7-6.7-59.8-21.1-10.6-8-12.7-23-4.7-33.6s23-12.7 33.6-4.7c11.3 8.5 21.6 11.4 31.2 11.5 17.6 .1 37.3-9.4 58.9-25.7 38.4-29 90.5-29 129 0 24 18.1 40.7 26.3 54.5 26.3s30.5-8.2 54.5-26.3c38.4-29 90.5-29 129 0 16.9 12.7 32.9 21.5 47.8 24.6 13.7 2.8 27.4 .9 42.3-10.3 10.6-8 25.6-5.9 33.6 4.7s5.9 25.6-4.7 33.6c-26.4 19.9-54.2 24.4-80.7 19.1-25.3-5.1-48.1-18.9-67.2-33.3-21.3-16.1-49.9-16.1-71.2 0z"/></svg>
+                        <h3 class="text-lg font-bold mb-2">Calcul d'Ouvrages d'Art</h3>
+                        <p class="text-slate-400 text-sm">Étude complète Pont VIPP précontraint sur Oued Nebhana, câbles moyens, vérifications ELU/ELS & ferraillage.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-800 text-white rounded-2xl shadow-xl relative overflow-hidden group">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-xl text-orange-400 mb-3"><path d="M284-1.3c-17.3-10-38.7-10-56 0L143.8 47.3c-17.3 10-28 28.5-28 48.5l0 101.9-88.3 51c-17.3 10-28 28.5-28 48.5l0 97.3c0 20 10.7 38.5 28 48.5l84.3 48.6c17.3 10 38.7 10 56 0l88.3-51 88.3 51c17.3 10 38.7 10 56 0L484.5 443c17.3-10 28-28.5 28-48.5l0-97.3c0-20-10.7-38.5-28-48.5l-88.3-51 0-101.9c0-20-10.7-38.5-28-48.5L284-1.3zM232 292.6l0 106.5-88.3 51c-1.2 .7-2.6 1.1-4 1.1l0-105.3 92.3-53.3zm231.4 .6c.7 1.2 1.1 2.6 1.1 4l0 97.3c0 2.9-1.5 5.5-4 6.9l-84.3 48.6c-1.2 .7-2.6 1.1-4 1.1l0-105.3 91.2-52.6zM348.3 95.8l0 101.9-92.3 53.3 0-106.5 91.2-52.6c.7 1.2 1.1 2.6 1.1 4z"/></svg>
+                        <h3 class="text-lg font-bold mb-2">BIM 3D & Structures</h3>
+                        <p class="text-slate-400 text-sm">Modélisation 3D Revit, descente de charges & analyse de sollicitations sous Robot Structural Analysis.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-900 text-white rounded-2xl shadow-xl relative overflow-hidden group">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-xl text-orange-400 mb-3"><path d="M64 64C64 28.7 92.7 0 128 0L384 0c35.3 0 64 28.7 64 64l0 121.3c-46.9 19-80 65-80 118.7 0 27.7 8.8 53.4 23.8 74.4-51.5 21-87.8 71.6-87.8 130.7 0 1 0 1.9 0 2.9l-176 0c-35.3 0-64-28.7-64-64L64 64zM208 400l0 64 53.4 0c7.2-29.4 21.3-56.1 40.4-78.3-6.1-19.5-24.3-33.7-45.8-33.7-26.5 0-48 21.5-48 48zM339 224.3c-1-.2-2-.3-3-.3l-32 0c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l16.7 0c2.1-22.8 8.4-44.3 18.3-63.7zM176 96c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zM176 224c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm240 80a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zM352 512c0-53 43-96 96-96l96 0c53 0 96 43 96 96 0 17.7-14.3 32-32 32l-224 0c-17.7 0-32-14.3-32-32z"/></svg>
+                        <h3 class="text-lg font-bold mb-2">Suivi & Sécurité Chantier</h3>
+                        <p class="text-slate-400 text-sm">Supervision de chantiers R+4, contrôle coffrage/ferraillage, respect des normes HSE et métrés.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-gallery-section mt-16">
+                <div class="text-center mb-6">
+                    <span class="text-orange-500 font-bold text-sm uppercase tracking-wider">En images</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Mon expérience sur le terrain</h3>
+                </div>
+                <div id="about-gallery" class="about-gallery" role="region" aria-roledescription="carrousel" aria-label="Photos de mes expériences sur chantier">
+                    <div class="about-gallery-frame">
+                        <img class="about-gallery-image is-active" data-gallery-slide src="assets/images/about-gallery/about-site-01-formwork.jpg" alt="Coffrage métallique installé sur un chantier d'ouvrage d'art" aria-hidden="false" fetchpriority="high">
+                        <img class="about-gallery-image" data-gallery-slide src="assets/images/about-gallery/about-site-02-reinforcement.jpg" alt="Armatures et échafaudages d'un ouvrage en construction" aria-hidden="true">
+                        <img class="about-gallery-image" data-gallery-slide src="assets/images/about-gallery/about-site-03-culvert.jpg" alt="Ouvrage hydraulique en béton en cours de construction" aria-hidden="true">
+                        <img class="about-gallery-image" data-gallery-slide src="assets/images/about-gallery/about-site-04-earthworks.jpg" alt="Travaux de terrassement avec une pelle mécanique" aria-hidden="true">
+                        <img class="about-gallery-image" data-gallery-slide src="assets/images/about-gallery/about-site-05-columns.jpg" alt="Piliers en béton armé en cours d'exécution" aria-hidden="true">
+                        <img class="about-gallery-image" data-gallery-slide src="assets/images/about-gallery/about-site-06-bridge-lift.jpg" alt="Levage d'une structure de pont par une grue mobile" aria-hidden="true">
+                        <img class="about-gallery-image" data-gallery-slide src="assets/images/about-gallery/about-site-07-steel-structure.jpg" alt="Échafaudage et structure métallique d'un chantier" aria-hidden="true">
+                        <img class="about-gallery-image" data-gallery-slide src="assets/images/about-gallery/about-site-08-site-visit.jpg" alt="Visite d'un chantier d'ouvrage souterrain" aria-hidden="true">
+
+                        <button class="about-gallery-control about-gallery-previous" type="button" data-gallery-previous aria-label="Photo précédente" title="Photo précédente">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                        </button>
+                        <button class="about-gallery-control about-gallery-next" type="button" data-gallery-next aria-label="Photo suivante" title="Photo suivante">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                        <div class="about-gallery-pagination" role="group" aria-label="Choisir une photo">
+                            <button class="about-gallery-dot" type="button" data-gallery-dot aria-label="Afficher la photo 1" aria-pressed="true"><span></span></button>
+                            <button class="about-gallery-dot" type="button" data-gallery-dot aria-label="Afficher la photo 2" aria-pressed="false"><span></span></button>
+                            <button class="about-gallery-dot" type="button" data-gallery-dot aria-label="Afficher la photo 3" aria-pressed="false"><span></span></button>
+                            <button class="about-gallery-dot" type="button" data-gallery-dot aria-label="Afficher la photo 4" aria-pressed="false"><span></span></button>
+                            <button class="about-gallery-dot" type="button" data-gallery-dot aria-label="Afficher la photo 5" aria-pressed="false"><span></span></button>
+                            <button class="about-gallery-dot" type="button" data-gallery-dot aria-label="Afficher la photo 6" aria-pressed="false"><span></span></button>
+                            <button class="about-gallery-dot" type="button" data-gallery-dot aria-label="Afficher la photo 7" aria-pressed="false"><span></span></button>
+                            <button class="about-gallery-dot" type="button" data-gallery-dot aria-label="Afficher la photo 8" aria-pressed="false"><span></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS & EXPERIENCES SECTION -->
+    <section id="projects" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-orange-500 font-bold text-sm uppercase tracking-wider">Réalisations Techniques</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Expériences & Projets Marquants</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">Projets d'ingénierie et de stages issus de mon parcours sur le terrain et en bureau d'études.</p>
+                <div class="w-20 h-1.5 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="project-filters">
+                <button data-filter="all" class="filter-btn active px-5 py-2 rounded-xl text-sm font-bold bg-orange-500 text-white shadow-md transition-all">
+                    Tous les Projets
+                </button>
+                <button data-filter="ouvrages" class="filter-btn px-5 py-2 rounded-xl text-sm font-bold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all">
+                    Ouvrages d'Art & Ponts
+                </button>
+                <button data-filter="routes" class="filter-btn px-5 py-2 rounded-xl text-sm font-bold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all">
+                    Infrastructures & Routes
+                </button>
+                <button data-filter="bim" class="filter-btn px-5 py-2 rounded-xl text-sm font-bold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all">
+                    BIM & Calcul Structure
+                </button>
+                <button data-filter="chantier" class="filter-btn px-5 py-2 rounded-xl text-sm font-bold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all">
+                    Chantier & Bâtiment
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+                <!-- Project 1 (PFE Ingénieur Gloulou) -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition-all" data-category="ouvrages routes">
+                    <div class="relative h-52 bg-slate-900 overflow-hidden">
+                        <img src="assets/images/project-road.jpg" alt="Conception routière et ouvrage d'art" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            PFE Ingénieur • 02/2026 - 06/2026
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-semibold text-orange-600 block">Entreprise Gloulou</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-1">Conception Routière & Pont VIPP (Oued Nebhana)</h3>
+                            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                                Étude géométrique d'un tronçon autoroutier de 14 km et étude complète de la précontrainte (câble moyen, pertes, vérifications ELU/ELS) pour un pont en béton précontraint (VIPP).
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">PISTE 5</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Béton Précontraint</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Civil 3D</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">ALIZE</span>
+                            </div>
+                            <button onclick="openModal('proj-pfe-ing')" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-orange-500 text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                                Détails du Projet <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-xs"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Stage EPEC) -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition-all" data-category="bim">
+                    <div class="relative h-52 bg-slate-900 overflow-hidden">
+                        <img src="assets/images/project-bim.jpg" alt="BIM Oued Hamdoun" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Stage Ingénieur • 06/2025 - 07/2025
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-semibold text-orange-600 block">Bureau d'Études EPEC</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-1">Conception BIM & Calcul Structure (Oued Hamdoun)</h3>
+                            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                                Modélisation 3D sous Revit des ouvrages hydrauliques à Sousse, analyse des sollicitations structurales sous Robot Structural Analysis et réalisation des plans d'exécution.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Autodesk Revit</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Robot Analysis</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Ferraillage</span>
+                            </div>
+                            <button onclick="openModal('proj-epec')" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-orange-500 text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                                Détails du Projet <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-xs"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 (PFE Licencié Gloulou) -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition-all" data-category="ouvrages routes">
+                    <div class="relative h-52 bg-slate-900 overflow-hidden">
+                        <img src="assets/images/project-bridge.jpg" alt="Ouvrage RL 892" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            PFE Licence • 02/2023 - 06/2023
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-semibold text-orange-600 block">Entreprise Gloulou • Sidi Bouzid</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-1">Ouvrage d'Art sur Route Locale RL 892</h3>
+                            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                                Étude technique globale, modélisation hydrologique/hydraulique, calcul des ferraillages selon normes et suivi d'exécution des plans sur le chantier.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Hydraulique</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">AutoCAD</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Ferraillage CRT</span>
+                            </div>
+                            <button onclick="openModal('proj-pfe-lic')" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-orange-500 text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                                Détails du Projet <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-xs"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Chantier R+4 Gloulou) -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition-all" data-category="chantier">
+                    <div class="relative h-52 bg-slate-900 overflow-hidden">
+                        <img src="assets/images/project-site.jpg" alt="Chantier R+4" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Stage Chantier • 06/2022 - 07/2022
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-semibold text-orange-600 block">Entreprise Gloulou</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-1">Suivi & Contrôle de Chantier Bâtiment R+4</h3>
+                            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                                Direction quotidienne des travaux, contrôle de conformité des éléments structuraux (poteaux, poutres, dalles) et gestion des équipes HSE.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Suivi Gros Œuvre</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Normes HSE</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Management</span>
+                            </div>
+                            <button onclick="openModal('proj-chantier')" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-orange-500 text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                                Détails du Projet <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-xs"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 (Bureau BTEC) -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition-all" data-category="bim">
+                    <div class="relative h-52 bg-slate-900 overflow-hidden">
+                        <img src="assets/images/project-drafting.jpg" alt="Plans de coffrage BTEC" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Stage Dessin • 07/2021 - 08/2021
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-semibold text-orange-600 block">Bureau d'Études BTEC</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-1">Conception & Plans de Coffrage</h3>
+                            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                                Élaboration des plans de coffrage pour bâtiments et ouvrages hydrauliques, vérification de la cohérence entre plans architecturaux et structuraux.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">AutoCAD</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Plans Coffrage</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-1 rounded">Dessin Technique</span>
+                            </div>
+                            <button onclick="openModal('proj-btec')" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-orange-500 text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                                Détails du Projet <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-xs"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS MATRIX -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-orange-500 font-bold text-sm uppercase tracking-wider">Expertise & Logiciels</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Compétences Techniques</h2>
+                <div class="w-20 h-1.5 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
+                
+                <!-- Category 1: Logiciels -->
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="w-9 h-9 rounded-lg bg-orange-500 text-white flex items-center justify-center text-sm font-bold mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class=""><path d="M64 96c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 240-64 0 0-240-384 0 0 240-64 0 0-240zM0 403.2C0 392.6 8.6 384 19.2 384l601.6 0c10.6 0 19.2 8.6 19.2 19.2 0 42.4-34.4 76.8-76.8 76.8L76.8 480C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Outils & Logiciels</h3>
+<ul class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#e51050;color:#ffffff">AC</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">AutoCAD</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#0696d7;color:#ffffff">R</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">Revit</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#1e293b;color:#fb923c">RB</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">Robot Structural Analysis</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#00a3a1;color:#ffffff">C3</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">Civil 3D</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#2f855a;color:#ffffff">GM</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">Global Mapper</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#7c3aed;color:#ffffff">AZ</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">ALIZE</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#b45309;color:#ffffff">P5</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">PISTE 5</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#0f766e;color:#ffffff">CV</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">Covadis</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#005f9e;color:#ffffff">SU</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">SketchUp</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#c74634;color:#ffffff">P6</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">Primavera P6</span>
+                        </li>
+                        <li class="flex flex-col items-center justify-start text-center gap-2 p-3 rounded-xl bg-white border border-slate-200">
+                            <span class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-extrabold tracking-tight" style="background:#217346;color:#ffffff">X</span>
+                            <span class="text-xs font-semibold text-slate-800 leading-tight">MS Excel</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 2: Domaines d'Expertise -->
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="w-9 h-9 rounded-lg bg-slate-900 text-white flex items-center justify-center text-sm font-bold mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class=""><path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L64 0zM96 64l192 0c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32L96 160c-17.7 0-32-14.3-32-32l0-32c0-17.7 14.3-32 32-32zm16 168a24 24 0 1 1 -48 0 24 24 0 1 1 48 0zm80 24a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm128-24a24 24 0 1 1 -48 0 24 24 0 1 1 48 0zM88 352a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm128-24a24 24 0 1 1 -48 0 24 24 0 1 1 48 0zm80 24a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM64 424c0-13.3 10.7-24 24-24l112 0c13.3 0 24 10.7 24 24s-10.7 24-24 24L88 448c-13.3 0-24-10.7-24-24zm232-24c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Domaines Techniques</h3>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-orange-500"><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg> Conception Structurale (BA & Précontraint)</li>
+                        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-orange-500"><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg> Modélisation Hydrologique & Hydraulique</li>
+                        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-orange-500"><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg> Dimensionnement et Calcul de Ferraillage</li>
+                        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-orange-500"><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg> Dessin Technique & Plans d'Exécution</li>
+                        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-orange-500"><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg> Métré & Devis Estimatif</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section id="timeline" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-orange-400 font-bold text-sm uppercase tracking-wider">Diplômes & Expériences</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Parcours Académique & Professionnel</h2>
+                <div class="w-20 h-1.5 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto relative border-l-2 border-slate-700 pl-6 sm:pl-8 space-y-10">
+                
+                <!-- 2026 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-6 h-6 rounded-full bg-orange-500 border-4 border-slate-900 group-hover:scale-125 transition-transform"></div>
+                    <span class="text-xs font-bold text-orange-400 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                        02/2026 - 06/2026
+                    </span>
+                    <h3 class="text-2xl font-bold text-white mt-3">Stagiaire Ingénieur (PFE) • Entreprise Gloulou</h3>
+                    <p class="text-slate-300 text-sm mt-1">Conception routière (14 km), bassins versants et dimensionnement structural Pont VIPP en béton précontraint sur Oued Nebhana.</p>
+                </div>
+
+                
+
+                <!-- 2025 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-700 group-hover:bg-orange-500 border-4 border-slate-900 transition-transform"></div>
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                        06/2025 - 07/2025
+                    </span>
+                    <h3 class="text-2xl font-bold text-white mt-3">Stagiaire Ingénieur • Bureau d'Études EPEC</h3>
+                    <p class="text-slate-300 text-sm mt-1">Modélisation BIM 3D (Revit), calcul sous Robot Structural Analysis et réalisation de plans de ferraillage (Oued Hamdoun Sousse).</p>
+                </div>
+<!-- 2023 - 2026 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-700 group-hover:bg-orange-500 border-4 border-slate-900 transition-transform"></div>
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                        2023 - 2026
+                    </span>
+                    <h3 class="text-2xl font-bold text-white mt-3">Cycle Ingénieur en Génie Civil</h3>
+                    <p class="text-orange-400 font-semibold text-sm">École d'Ingénieurs Polytechnique de Sousse</p>
+                </div>
+                <!-- 2023 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-700 group-hover:bg-orange-500 border-4 border-slate-900 transition-transform"></div>
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                        02/2023 - 06/2023
+                    </span>
+                    <h3 class="text-2xl font-bold text-white mt-3">Stagiaire Technicien (PFE) • Entreprise Gloulou</h3>
+                    <p class="text-slate-300 text-sm mt-1">Étude hydraulique & calcul structural d'un ouvrage d'art sur RL 892 (Sidi Bouzid) et suivi d'exécution.</p>
+                </div>
+
+                <!-- 2020 - 2023 -->
+                
+
+                <!-- 2022 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-700 group-hover:bg-orange-500 border-4 border-slate-900 transition-transform"></div>
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                        06/2022 - 07/2022
+                    </span>
+                    <h3 class="text-2xl font-bold text-white mt-3">Stagiaire Technicien • Entreprise Gloulou</h3>
+                    <p class="text-slate-300 text-sm mt-1">Suivi et contrôle de chantier d'un bâtiment R+4 : conformité des éléments structuraux, application des plans d'exécution et respect des normes HSE.</p>
+                </div>
+
+                <!-- 2021 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-700 group-hover:bg-orange-500 border-4 border-slate-900 transition-transform"></div>
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                        07/2021 - 08/2021
+                    </span>
+                    <h3 class="text-2xl font-bold text-white mt-3">Stagiaire Technicien • Bureau d'Études BTEC</h3>
+                    <p class="text-slate-300 text-sm mt-1">Élaboration de plans de coffrage (bâtiments et ouvrages hydrauliques) et vérification de la cohérence des plans architecturaux et structuraux.</p>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-700 group-hover:bg-orange-500 border-4 border-slate-900 transition-transform"></div>
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                        2020 - 2023
+                    </span>
+                    <h3 class="text-2xl font-bold text-white mt-3">Licence en Génie Civil</h3>
+                    <p class="text-orange-400 font-semibold text-sm">ISSAT Gabès (Institut Supérieur des Sciences Appliquées et de Technologie)</p>
+                </div>
+                <!-- 2020 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-700 group-hover:bg-orange-500 border-4 border-slate-900 transition-transform"></div>
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                        2020
+                    </span>
+                    <h3 class="text-2xl font-bold text-white mt-3">Baccalauréat en Sciences Techniques</h3>
+                    <p class="text-orange-400 font-semibold text-sm">Lycée Ibnou Sina M'saken | Sousse</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXTRA-CURRICULAR & COMMUNITY SECTION -->
+    <section id="engagement" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-orange-500 font-bold text-sm uppercase tracking-wider">Leadership & Bénévolat</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Centres d'Intérêt & Engagement</h2>
+                <div class="w-20 h-1.5 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="w-9 h-9 rounded-lg bg-orange-500 text-white flex items-center justify-center text-sm font-bold mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class=""><path d="M149.1 64.8L138.7 96 64 96C28.7 96 0 124.7 0 160L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64l-74.7 0-10.4-31.2C356.4 45.2 338.1 32 317.4 32L194.6 32c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
+                    </div>
+                    <span class="text-xs font-bold text-orange-600 uppercase">2023 - Présent</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Jeune Chambre Internationale (JCI M'saken)</h3>
+                    <p class="text-sm font-semibold text-slate-800">Directeur Média (2025)</p>
+                    <p class="text-xs text-slate-500 mt-1">Membre Actif (2023 - 2024)</p>
+                </div>
+
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="w-9 h-9 rounded-lg bg-slate-900 text-white flex items-center justify-center text-sm font-bold mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class=""><path d="M320 16a104 104 0 1 1 0 208 104 104 0 1 1 0-208zM96 88a72 72 0 1 1 0 144 72 72 0 1 1 0-144zM0 416c0-70.7 57.3-128 128-128 12.8 0 25.2 1.9 36.9 5.4-32.9 36.8-52.9 85.4-52.9 138.6l0 16c0 11.4 2.4 22.2 6.7 32L32 480c-17.7 0-32-14.3-32-32l0-32zm521.3 64c4.3-9.8 6.7-20.6 6.7-32l0-16c0-53.2-20-101.8-52.9-138.6 11.7-3.5 24.1-5.4 36.9-5.4 70.7 0 128 57.3 128 128l0 32c0 17.7-14.3 32-32 32l-86.7 0zM472 160a72 72 0 1 1 144 0 72 72 0 1 1 -144 0zM160 432c0-88.4 71.6-160 160-160s160 71.6 160 160l0 16c0 17.7-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32l0-16z"/></svg>
+                    </div>
+                    <span class="text-xs font-bold text-orange-600 uppercase">2020 - 2023</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Club Génie Civil - ISSAT Gabès</h3>
+                    <p class="text-sm font-semibold text-slate-800">Responsable Marketing & Média (2022-2023)</p>
+                    <p class="text-xs text-slate-500 mt-1">Membre Actif (2020 - 2022)</p>
+                </div>
+
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="w-9 h-9 rounded-lg bg-red-500 text-white flex items-center justify-center text-sm font-bold mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class=""><path d="M279.6 31C265.5 11.5 242.9 0 218.9 0 177.5 0 144 33.5 144 74.9l0 2.4c0 64.4 82 133.4 122.2 163.3 13 9.7 30.5 9.7 43.5 0 40.2-30 122.2-98.9 122.2-163.3l0-2.4c0-41.4-33.5-74.9-74.9-74.9-24 0-46.6 11.5-60.7 31L288 42.7 279.6 31zM109.3 341.5L66.7 384 32 384c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l320.5 0c29 0 57.3-9.3 80.7-26.5l126.6-93.3c17.8-13.1 21.6-38.1 8.5-55.9s-38.1-21.6-55.9-8.5L392.6 416 280 416c-13.3 0-24-10.7-24-24s10.7-24 24-24l72 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-152.2 0c-33.9 0-66.5 13.5-90.5 37.5z"/></svg>
+                    </div>
+                    <span class="text-xs font-bold text-orange-600 uppercase">2020 - 2023</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Croissant-Rouge Tunisien</h3>
+                    <p class="text-sm font-semibold text-slate-800">Membre Bénévolat</p>
+                    <p class="text-xs text-slate-500 mt-1">Comité Local M'saken</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-orange-500 font-bold text-sm uppercase tracking-wider">Coordonnées</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Contactez-Moi Directement</h2>
+                <div class="w-20 h-1.5 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="contact-layout grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-10 items-start">
+                
+                <!-- Contact Info Cards -->
+                <div class="contact-details lg:col-span-5 space-y-4">
+                    <div class="contact-info-card p-5 bg-white rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                        <div class="contact-icon w-11 h-11 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-sm shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class=""><path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Téléphone</h4>
+                            <span class="text-orange-600 font-bold text-base">+216 25 118 311</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card p-5 bg-white rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                        <div class="contact-icon w-11 h-11 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-sm shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class=""><path d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Email</h4>
+                            <span class="text-orange-600 font-bold text-sm break-all">najmeddine.gharbi2001@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Buttons -->
+                    <div class="contact-actions grid grid-cols-2 gap-3 pt-2">
+                        <a href="https://wa.me/21625118311" target="_blank" rel="noopener noreferrer" class="contact-action contact-whatsapp py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-base"><path d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg> WhatsApp Direct
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=najmeddine.gharbi2001%40gmail.com" target="_blank" rel="noopener noreferrer" class="contact-action contact-email py-3 px-4 bg-slate-900 hover:bg-orange-500 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class="text-base"><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9L229.2 276.1c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8l496.9-178z"/></svg> Email Direct
+                        </a>
+                    </div>
+
+                    <div class="contact-socials" aria-label="Réseaux sociaux">
+                        <p class="contact-socials-title">Retrouvez-moi aussi sur</p>
+                        <div class="contact-social-links">
+                            <a href="https://www.facebook.com/najmeddine.gharbi.12" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Najmeddine Gharbi" title="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H7v3.2h2.8V21h3.7Z"/></svg>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/najmeddine-gharbi-aa12531b5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Najmeddine Gharbi" title="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.34H4.96V9.01h2.97v9.33ZM6.45 7.74a1.72 1.72 0 1 1 .02-3.44 1.72 1.72 0 0 1-.02 3.44Zm11.89 10.6h-2.97v-4.54c0-1.08-.02-2.47-1.51-2.47-1.52 0-1.75 1.18-1.75 2.39v4.62H9.14V9.01h2.85v1.27h.04c.4-.73 1.37-1.5 2.82-1.5 3.01 0 3.57 1.98 3.57 4.56v5Z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.instagram.com/najmeddinegharbi" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Najmeddine Gharbi" title="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm8.9 1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Contact Form -->
+                <div class="contact-form-column lg:col-span-7">
+                    <form id="contact-form" method="POST" action="https://formsubmit.co/najmeddine.gharbi2001@gmail.com" class="bg-white p-8 rounded-2xl border border-slate-200 shadow-lg space-y-5">
+                        <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+                        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Nom & Prénom</label>
+                                <input type="text" id="form-name" name="name" required placeholder="Ex: Ali Ben Salem" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-orange-500 outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Email</label>
+                                <input type="email" id="form-email" name="email" required placeholder="nom@entreprise.tn" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-orange-500 outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Sujet</label>
+                            <input type="text" id="form-subject" name="subject" required placeholder="Opportunité de recrutement / Consulting..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-orange-500 outline-none text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Message</label>
+                            <textarea id="form-message" name="message" rows="4" required placeholder="Bonjour Najmeddine..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-orange-500 outline-none text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold transition-all shadow-lg shadow-orange-500/20 text-sm">
+                            Envoyer le Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center">
+            <p>© 2026 Najmeddine Gharbi. Tous droits réservés.</p>
+            <p class="mt-2 sm:mt-0 text-slate-500">Ingénieur Génie Civil</p>
+        </div>
+    </footer>
+
+    <dialog id="cv-preview-modal" class="cv-preview-modal" aria-labelledby="cv-preview-title">
+        <div class="cv-preview-header">
+            <div>
+                <p class="cv-preview-eyebrow">Curriculum Vitae</p>
+                <h2 id="cv-preview-title">Aperçu du CV</h2>
+            </div>
+            <button id="cv-preview-close" class="cv-preview-close" type="button" aria-label="Fermer l'aperçu du CV" onclick="closeCVPreview()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+            </button>
+        </div>
+        <div class="cv-preview-toolbar">
+            <div class="cv-preview-languages" role="group" aria-label="Langue du CV">
+                <button type="button" data-cv-language="fr" aria-label="CV Français" aria-pressed="true">FR</button>
+                <button type="button" data-cv-language="en" aria-label="CV English" aria-pressed="false">EN</button>
+            </div>
+            <a id="cv-preview-open" class="cv-preview-open" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le CV dans un nouvel onglet">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 4h6v6m-11 4L20 4"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>
+                <span>Ouvrir le PDF</span>
+            </a>
+            <a id="cv-preview-download" class="cv-preview-download" href="assets/cv.pdf" download="CV_Najmeddine_Gharbi_FR.pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3"/></svg>
+                <span>Télécharger le CV</span>
+            </a>
+        </div>
+        <iframe id="cv-preview-frame" class="cv-preview-frame" src="about:blank" title="Aperçu du CV" loading="lazy"></iframe>
+    </dialog>
+
+    <!-- MODAL PROJECT DETAILS -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-2xl p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em" class=""><path d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg>
+            </button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="js/project-data.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
