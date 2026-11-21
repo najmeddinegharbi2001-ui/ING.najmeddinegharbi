@@ -63,8 +63,15 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+        });
+        mobileLinks.forEach(link => link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }));
 
         // Header email shortcut
         const emailPopover = document.getElementById('email-popover');
@@ -235,6 +242,52 @@
             });
         }
 
+        if (!prefersReducedMotion) {
+            const heroSection = document.getElementById('hero');
+            const heroMarks = heroSection
+                ? Array.from(heroSection.querySelectorAll('.hero-mark'))
+                : [];
+            const heroPortrait = heroSection
+                ? heroSection.querySelector('.hero-portrait')
+                : null;
+
+            if (heroSection) {
+                let heroPointerFrame = 0;
+                heroSection.addEventListener('pointermove', event => {
+                    if (heroPointerFrame) return;
+                    const bounds = heroSection.getBoundingClientRect();
+                    const normalizedX = (event.clientX - bounds.left) / bounds.width - 0.5;
+                    const normalizedY = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+                    heroPointerFrame = window.requestAnimationFrame(() => {
+                        heroMarks.forEach((mark, index) => {
+                            const depth = 7 + (index % 3) * 4;
+                            mark.style.setProperty('--hero-x', `${normalizedX * depth}px`);
+                            mark.style.setProperty('--hero-y', `${normalizedY * depth}px`);
+                        });
+
+                        if (heroPortrait) {
+                            heroPortrait.style.setProperty('--portrait-x', `${normalizedX * 7}px`);
+                            heroPortrait.style.setProperty('--portrait-y', `${normalizedY * 5}px`);
+                        }
+                        heroPointerFrame = 0;
+                    });
+                });
+
+                heroSection.addEventListener('pointerleave', () => {
+                    heroMarks.forEach(mark => {
+                        mark.style.setProperty('--hero-x', '0');
+                        mark.style.setProperty('--hero-y', '0');
+                    });
+                    if (heroPortrait) {
+                        heroPortrait.style.setProperty('--portrait-x', '0');
+                        heroPortrait.style.setProperty('--portrait-y', '0');
+                    }
+                });
+            }
+
+        }
+
         const scrollProgress = document.createElement('div');
         scrollProgress.className = 'scroll-progress';
         scrollProgress.setAttribute('aria-hidden', 'true');
@@ -296,6 +349,7 @@
             header.classList.toggle('is-scrolled', isScrolled);
             if (isScrolled && !wasScrolled) {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 setEmailPopoverOpen(false);
             }
             const activePoint = window.innerHeight * 0.3;
@@ -360,7 +414,7 @@
                 if (gallerySlides.length > 1 && !document.hidden && !isPointerOverGallery) {
                     autoAdvanceTimer = window.setInterval(() => {
                         showGallerySlide(currentSlide + 1);
-                    }, 5000);
+                    }, 2000);
                 }
             };
 

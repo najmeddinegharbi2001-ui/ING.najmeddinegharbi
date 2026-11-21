@@ -10,6 +10,7 @@
         'Me Contacter': 'Contact Me',
         'Choisir la langue': 'Choose language',
         'Ouvrir le menu de navigation': 'Open navigation menu',
+        'Afficher les liens de contact': 'Show contact links',
         'Afficher l’adresse e-mail': 'Show contact links',
         "Afficher l'adresse e-mail": 'Show contact links',
         'Afficher mes réseaux sociaux': 'Show my social profiles',
@@ -32,6 +33,30 @@
         'Ouvrir le PDF': 'Open PDF',
         'Télécharger le CV': 'Download CV',
         'À Propos de Moi': 'About Me',
+        'En images': 'In pictures',
+        'Mon expérience sur le terrain': 'My On-Site Experience',
+        'Photos de mes expériences sur chantier': 'Photos of my on-site experience',
+        'Choisir une photo': 'Choose a photo',
+        'Photo précédente': 'Previous photo',
+        'Photo suivante': 'Next photo',
+        'Afficher la photo 1': 'Show photo 1',
+        'Afficher la photo 2': 'Show photo 2',
+        'Afficher la photo 3': 'Show photo 3',
+        'Afficher la photo 4': 'Show photo 4',
+        'Afficher la photo 5': 'Show photo 5',
+        'Afficher la photo 6': 'Show photo 6',
+        'Afficher la photo 7': 'Show photo 7',
+        'Afficher la photo 8': 'Show photo 8',
+        "Coffrage métallique installé sur un chantier d'ouvrage d'art": 'Metal formwork installed on a bridge construction site',
+        "Armatures et échafaudages d'un ouvrage en construction": 'Reinforcement and scaffolding on a structure under construction',
+        'Ouvrage hydraulique en béton en cours de construction': 'Concrete hydraulic structure under construction',
+        'Travaux de terrassement avec une pelle mécanique': 'Earthworks with an excavator',
+        'Piliers en béton armé en cours d’exécution': 'Reinforced-concrete columns under construction',
+        "Piliers en béton armé en cours d'exécution": 'Reinforced-concrete columns under construction',
+        "Levage d'une structure de pont par une grue mobile": 'Bridge structure being lifted by a mobile crane',
+        'Échafaudage et structure métallique d’un chantier': 'Scaffolding and steel structure on a construction site',
+        "Échafaudage et structure métallique d'un chantier": 'Scaffolding and steel structure on a construction site',
+        "Visite d'un chantier d'ouvrage souterrain": 'Site visit to an underground structure project',
         'Profil': 'Profile',
         'Compétences Clés': 'Key Skills',
         'Profil & Compétences Clés': 'Profile & Key Skills',
@@ -46,13 +71,16 @@
         'conception et calcul structural': 'structural design and analysis',
         ' (Béton Armé), ': ' (reinforced concrete), ',
         'modélisation hydraulique & routière': 'hydraulic and road modelling',
+        '(Civil 3D, PISTE 5, ALIZE, Covadis), ainsi que la': '(Civil 3D, PISTE 5, ALIZE, Covadis), as well as',
         ', ainsi que la ': ', as well as ',
         'maîtrise des processus BIM': 'BIM process expertise',
         ' sous Autodesk Revit et Robot Structural Analysis.': ' using Autodesk Revit and Robot Structural Analysis.',
         'Mon parcours comprend également des expériences terrain au sein d’entreprises et de bureaux d’études, notamment dans le suivi de chantiers et la réalisation d’ouvrages d’art et d’assainissement.': 'My experience also includes field work with contractors and engineering consultancies, including site supervision and the delivery of bridges and drainage infrastructure.',
         "Mon parcours comprend également des expériences terrain au sein d'entreprises et de bureaux d'études, notamment dans le suivi de chantiers et la réalisation d'ouvrages d'art et d'assainissement.": 'My experience also includes field work with contractors and engineering consultancies, including site supervision and the delivery of bridges and drainage infrastructure.',
         'Formation': 'Education',
-        'Ingénieur (2023 - 2026)': 'Engineering degree (2023–2026)',
+        'Diplôme': 'Degree',
+        'Ingénieur Génie Civil (2026)': 'Civil Engineering Degree (2026)',
+        'Licence en Génie Civil (2023)': 'Bachelor’s Degree in Civil Engineering (2023)',
         'Adresse': 'Location',
         "M'saken, Sousse, Tunisie": "M'saken, Sousse, Tunisia",
         'Conception Routière & VRD': 'Road & Infrastructure Design',
@@ -107,6 +135,7 @@
         'Compétences Techniques': 'Technical Skills',
         'Outils & Logiciels': 'Tools & Software',
         'Domaines Techniques': 'Technical Areas',
+        'Autres logiciels & outils': 'Other Software & Tools',
         'Dimensionnement et Calcul de Ferraillage': 'Structural Design & Reinforcement Calculations',
         "Dessin Technique & Plans d'Exécution": 'Technical Drafting & Construction Drawings',
         'Réseaux sociaux': 'Social media',
@@ -178,8 +207,17 @@
         'Portrait de Najmeddine Gharbi': 'Portrait of Najmeddine Gharbi',
         'BIM Oued Hamdoun': 'BIM project at Oued Hamdoun',
         'Ouvrage RL 892': 'Bridge structure on RL 892',
-        'Plans de coffrage BTEC': 'BTEC formwork drawings'
+        'Chantier R+4': 'R+4 construction site',
+        'Plans de coffrage BTEC': 'BTEC formwork drawings',
+        'Logo Jeune Chambre Internationale M’saken': 'JCI M’saken logo',
+        "Logo Jeune Chambre Internationale M'saken": 'JCI M’saken logo',
+        'Logo Club Génie Civil ISSAT Gabès': 'Civil Engineering Club at ISSAT Gabès logo',
+        'Logo Croissant-Rouge Tunisien': 'Tunisian Red Crescent logo',
+        'Retour en haut / Back to top': 'Back to top'
     };
+    const englishTextBySource = Object.fromEntries(
+        Object.entries(englishText).map(([source, translation]) => [source.trim(), translation])
+    );
 
     const projectDetailsEn = {
         'proj-pfe-ing': {
@@ -265,7 +303,7 @@
 
             const source = originalText.get(textNode);
             const trimmed = source.trim();
-            const translated = language === 'en' ? englishText[trimmed] : null;
+            const translated = language === 'en' ? englishTextBySource[trimmed] : null;
             if (translated) {
                 textNode.nodeValue = source.replace(trimmed, translated);
             } else {
@@ -284,7 +322,7 @@
                 if (!element.hasAttribute(attribute)) return;
                 if (!(attribute in attributes)) attributes[attribute] = element.getAttribute(attribute);
                 const source = attributes[attribute];
-                element.setAttribute(attribute, language === 'en' ? (englishText[source] || source) : source);
+                element.setAttribute(attribute, language === 'en' ? (englishTextBySource[source.trim()] || source) : source);
             });
         });
 
